@@ -312,13 +312,13 @@ class NeoPatterns : public Adafruit_NeoPixel
         }
     };//end class
 
-NeoPatterns eye1(12,3, NEO_GRB + NEO_KHZ800, &eye1Complete);
+NeoPatterns eye1(24,3, NEO_GRB + NEO_KHZ800, &eye1Complete);
 
 void setup() 
 {
 eye1.begin();
-eye1.flame(eye1.Color(252,175,8),eye1.Color(255,0,0),random(0,20));
-eye1.setBrightness(164);
+eye1.flame(eye1.Color(252,175,8),eye1.Color(255,0,0),random(10,30));
+eye1.setBrightness(20);
 eye1.show();
 
 }
@@ -392,7 +392,7 @@ if((currentMillis - lastMillis) > interval)
     while((currentMillis - lastMillis) < patInter)
      {
       lastMillis = currentMillis;
-      eye1.flame(eye1.Color(252,175,8),eye1.Color(255,0,0),random(0,20));
+      eye1.flame(eye1.Color(252,175,8),eye1.Color(255,0,0),random(10,30));
       //eye1.show();
       break;
      }
